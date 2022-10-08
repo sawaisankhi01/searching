@@ -2,9 +2,9 @@
 using namespace std;
 int BS(int arr[], int s, int e, int key)
 {
+	int mid=s+e/2;
 	while(s<e)
 	{
-		int mid=s+e/2;
 		if(arr[mid]==key)
 		{
 			return mid;
@@ -17,6 +17,7 @@ int BS(int arr[], int s, int e, int key)
 		{
 			return BS(arr,s, mid-1, key );
 		}
+		mid=(s+e)/2;
 	}
 	return -1;
 }
